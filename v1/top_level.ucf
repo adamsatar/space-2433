@@ -1,0 +1,63 @@
+
+#//ja1
+#NET "hsync" LOC = T12;
+NET "reset" LOC = C9;
+
+#NET "speaker" IOSTANDARD = LVCMOS33;
+#NET "speaker" LOC = E11; //JD4
+#
+#
+##
+##NET"encoder_click" LOC = V12;
+##NET "encoder_click" IOSTANDARD = LVCMOS33;
+#
+#
+#//middle button
+NET "game_action_button" LOC = B8;
+NET "game_action_button" IOSTANDARD = LVCMOS33;
+#
+#//right button
+#NET "shoot_button" LOC = D9;
+#NET "shoot_button" IOSTANDARD = LVCMOS33;
+
+
+NET "reset" IOSTANDARD = LVCMOS33;
+
+
+NET "b[0]" LOC = R7;
+NET "b[1]" LOC = T7;
+NET "g[0]" LOC = P8;
+NET "g[1]" LOC = T6;
+NET "g[2]" LOC = V6;
+NET "r[0]" LOC = U7;
+NET "r[2]" LOC = N7;
+NET "r[1]" LOC = V7;
+NET "clk" LOC = V10;
+NET "h_sync" LOC = N6;
+NET "v_sync" LOC = P7;
+NET "rotb" LOC = N10;
+NET "rota" LOC = P11;
+
+//NET "p1_action_button" = H3; //jc1
+#NET "p1_rotb" LOC = L7; //jc2
+#NET "p1_rota" LOC = K6; //jc3
+#NET "p1_rota" IOSTANDARD = LVCMOS33;
+#NET "p1_rotb" IOSTANDARD = LVCMOS33;
+//NET "p1_action_button" IOSTANDARD = LVCMOS33;
+
+
+# PlanAhead Generated IO constraints 
+
+NET "b[1]" IOSTANDARD = LVCMOS33;
+NET "b[0]" IOSTANDARD = LVCMOS33;
+NET "g[2]" IOSTANDARD = LVCMOS33;
+NET "g[1]" IOSTANDARD = LVCMOS33;
+NET "g[0]" IOSTANDARD = LVCMOS33;
+NET "r[2]" IOSTANDARD = LVCMOS33;
+NET "r[1]" IOSTANDARD = LVCMOS33;
+NET "r[0]" IOSTANDARD = LVCMOS33;
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "h_sync" IOSTANDARD = LVCMOS33;
+NET "rota" IOSTANDARD = LVCMOS33;
+NET "rotb" IOSTANDARD = LVCMOS33;
+NET "v_sync" IOSTANDARD = LVCMOS33;
