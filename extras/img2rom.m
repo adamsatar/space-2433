@@ -1,4 +1,4 @@
-function  [rgb8bit,rgb8] = img2rom(img)
+function  [rgb8bit] = img2rom(img)
 
 
 %read image

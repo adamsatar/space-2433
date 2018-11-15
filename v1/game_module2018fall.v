@@ -43,20 +43,7 @@ module game_module2018fall(
 		
 
 	
-		
-		always @(posedge clk)
-//if(quadAr[2] ^ quadAr[1] ^ quadBr[2] ^ quadBr[1])
-begin
-	//if(quadAr[2] ^ quadBr[1]) begin
-		if(paddlePosition < 508)        // make sure the value doesn't overflow
-			paddlePosition <= paddlePosition + 3'd4;
-//	end
-	else begin
-		if(paddlePosition > 3)        // make sure the value doesn't underflow
-			paddlePosition <= paddlePosition - 3'd4;
-	end
-end
-		
+
 
 always @(posedge clk) 
 if (inc_score_signal == 1'b1)
@@ -131,7 +118,7 @@ always @(posedge clk or posedge reset) begin
 	if(quadAr[2] ^ quadBr[1]) begin
 		//if(ship_x < 508)        // make sure the value doesn't overflow
 		if(ship_x < (av_x - ship_x_pixels - 1'b1))
-			ship_x <= ship_x + 3'd4;
+			ship_x <= ship_x - 3'd4;
 	end
 	//move left
 	else begin
@@ -140,7 +127,7 @@ always @(posedge clk or posedge reset) begin
 	//		ship_x <= ship_x - 3'd4;
 	
 		if(ship_x > 0)
-			ship_x <= ship_x - 3'd4;
+			ship_x <= ship_x + 3'd4;
 	end
 end
 end
