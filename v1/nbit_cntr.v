@@ -10,7 +10,8 @@
 //10 is count down
 //11 is parallel load
 //.PARALLEL_LOAD(1'b0),.BITS(6'd32),.INITIAL_COUNT(1'b0),.END_COUNT(EndCount))
-module nbit_cntr #(parameter BITS = 6'd32, INITIAL_COUNT = 32'd0, END_COUNT = 32'd12, PARALLEL_LOAD = 32'd0)
+module nbit_cntr #(parameter BITS = 6'd25, INITIAL_COUNT = 25
+'d0, END_COUNT = 25'd12, PARALLEL_LOAD = 25'd0)
 (	
 	input clk,reset,condition0,condition1,
 	//input [BITS - 1:0] initial_count, end_count,p_load,

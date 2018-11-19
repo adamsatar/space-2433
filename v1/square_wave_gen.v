@@ -4,7 +4,7 @@
 //11.5.18
 //square wave generator with parameter
 //////////////////////////////////////////////////////////////////////////////////
-module square_wave_gen #(parameter SYSCLK_MHZ = 7'd1000, TARGET_CLK_MHZ = 5'd250)(
+module square_wave_gen #(parameter SYSCLK_MHZ = 7'd100, TARGET_CLK_MHZ = 5'd25)(
 		input clk, reset,
 	
 		output reg square_wave
@@ -13,7 +13,7 @@ module square_wave_gen #(parameter SYSCLK_MHZ = 7'd1000, TARGET_CLK_MHZ = 5'd250
 reg [15:0] tic_count, half_period;
 initial begin 
 	half_period <= SYSCLK_MHZ/(TARGET_CLK_MHZ*2);
-	//half_period<=500000;
+
 end
 
 

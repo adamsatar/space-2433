@@ -3,12 +3,7 @@
 //11.7.18
 //ece433 pong
 //module for the ship game entity graphical display
-//calculates the memory address containing 
-//the ship pixel based on the current ship_x, ship_y, 
-//and where the x, y are (ie the vga scan coordinate)
 
-//note; interesting results when driving this module with
-//100MHz vs the 25MHz signal
 module ship_unit(	
 				input clk,reset,
 				input [9:0] x,
@@ -71,13 +66,16 @@ wire [11:0] ship_pixel;
 //assign ship_addra = ((ship_line_number)*(ship_x_pixels) + ship_pixel_number);
 	assign ship_pixel = {ship_row,ship_col};
 	
-// Instantiate the module
-ship_rom ship_img (
-    .address(ship_pixel), 
-    .rgb_data(rgb_data)
-    );
+	
+	localparam filepath = "/home/adam/repos/space-2433/extras/ship_64x64_hex.data";
+	ram #(.filepath(filepath),.ADDR_BITS(12))
+	ship_ram
+		(
+           .addra(ship_pixel),
+           .dout(rgb_data)
+        
+        );
 
-  
   endmodule
 
 

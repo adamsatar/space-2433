@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../v1/quad_encoder.v" \
+"../../../../../v1/nbit_cntr.v" \
+"../../../../../v1/clked_negative_oneshot.v" \
+"../../../../../v1/v_sync_ctrl.v" \
+"../../../../../v1/square_wave_gen.v" \
+"../../../../../v1/ship_rom.v" \
+"../../../../../v1/h_sync_ctrl.v" \
+"../../../../../v1/game_title_rom.v" \
+"../../../../../v1/delay_loop.v" \
+"../../../../../v1/alien_rom.v" \
+"../../../../../v1/vga_ctrl.v" \
+"../../../../../v1/title_screen.v" \
+"../../../../../v1/ship_unit.v" \
+"../../../../../v1/game_module2018fall.v" \
+"../../../../../v1/debouncer.v" \
+"../../../../../v1/alien_unit.v" \
+"../../../../../v1/top_level.v" \
+"../../../../space-2433.srcs/sources_1/new/init_rom_test.v" \
+"../../../../../v1/alien_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

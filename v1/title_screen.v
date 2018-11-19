@@ -51,10 +51,11 @@ wire [15:0] title_pixel;
 //assign ship_addra = ((ship_line_number)*(ship_x_pixels) + ship_pixel_number);
 	assign title_pixel = {title_row,title_col};
 	
-
-game_title_rom game_title_img (
-    .address(title_pixel), 
-    .rgb_data(rgb_data)
+parameter filepath = "/home/adam/repos/space-2433/extras/title_512x128_hex.data";
+ram #(.filepath(filepath),.DATA_WIDTH(8), .DATA_DEPTH( 65536),.ADDR_BITS(16))
+game_title_img (
+    .addra(title_pixel), 
+    .dout(rgb_data)
     );
 
 

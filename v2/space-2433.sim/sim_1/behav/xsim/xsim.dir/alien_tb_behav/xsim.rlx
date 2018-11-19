@@ -1,0 +1,12 @@
+
+{ 
+    crc :  103312627713130757  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto d864ce0d9a45400c998656ee2c1dd65a --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot alien_tb_behav xil_defaultlib.alien_tb xil_defaultlib.glbl" , 
+    buildDate : "Oct  1 2018" , 
+    buildTime : "18:29:25" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/alien_tb_behav/xsimk\"   \"xsim.dir/alien_tb_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/alien_tb_behav/obj/xsim_1.lnx64.o\" \"/space/xilinx/Vivado/2018.2/lib/lnx64.o/librdi_simulator_kernel.so\"  \"/space/xilinx/Vivado/2018.2/lib/lnx64.o/librdi_simbridge_kernel.so\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

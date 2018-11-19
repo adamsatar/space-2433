@@ -32,24 +32,6 @@ h_sync_unit (
     );
 
 
-
-
-//
-//hsyncModule2018fall hsyncUnit(H_SYNC_PULSE, H_BACK_PORCH,  AV_X, H_FRONT_PORCH, 
-//h_sync, LineEnd, x, vga_clk, reset, clk);
-//
-
-
-//module vsyncModule2018fallTemplate(LineEnd, vSynchPulse, vFrontPorch, Yresolution, 
-////vBackPorch, vsync, ypos, reset, clock);
-//vsyncModule2018fallTemplate vsyncUnit(LineEnd, V_SYNC_PULSE, V_FRONT_PORCH, AV_Y, 
-//V_BACK_PORCH, v_sync, y, reset, clk);
-
-//vsyncModule2018fallTemplate vsyncUnit(line_end, V_SYNC_PULSE, V_FRONT_PORCH, AV_Y, 
-//V_BACK_PORCH, v_sync, y, reset, clk);
-//
-
-
 // Instantiate the module
 v_sync_ctrl #(.AV_Y(AV_Y),.V_SYNC_PULSE(V_SYNC_PULSE),.V_FRONT_PORCH(V_FRONT_PORCH),.V_BACK_PORCH(V_BACK_PORCH))
 v_sync_unit 
@@ -62,22 +44,6 @@ v_sync_unit
 	);
 
 
-
-
-/*
-
-h_sync_ctrl #(.AV_Y(AV_Y),.V_SYNC_PULSE(V_SYNC_PULSE),.V_FRONT_PORCH(V_FRONT_PORCH),.V_BACK_PORCH(V_BACK_PORCH))
-v_sync_unit (
-		.clk(clk),
-
-    .reset(reset)
-	 .v_sync(v_sync),
-	.y(y)
-    );
-
-
-
-*/
 
 
 endmodule

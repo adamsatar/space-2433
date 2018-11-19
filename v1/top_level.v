@@ -6,17 +6,17 @@
 //turned into a space-invaders-like game
 module top_level(
 
-	input clk, reset, rota, rotb,game_action_button,
-							 p1_rota,p1_rotb,shoot_button,
+	input clk, reset,/* rota, rotb,*/game_action_button,
+							 /*p1_rota,p1_rotb,shoot_button,*/
     output reg [2:0] r,
     output reg [2:0] g,
     output reg [1:0] b,
     
 	
 	 
-	 output h_sync, v_sync,
+	 output h_sync, v_sync/*,
 	
-	 output speaker
+	 output speaker*/
 
     );
 

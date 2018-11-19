@@ -1,0 +1,4 @@
+Running: xsim.dir/alien_tb_behav/xsimk -simmode gui -wdb alien_tb_behav.wdb -simrunnum 0 -socket 50383
+Design successfully loaded
+Design Loading Memory Usage: 32676 KB (Peak: 32732 KB)
+Design Loading CPU Usage: 0 ms

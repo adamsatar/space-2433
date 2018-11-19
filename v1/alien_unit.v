@@ -86,10 +86,10 @@ end
 wire [9:0] alien_pixel;
 
 assign alien_pixel = {alien_row,alien_col};
-alien_rom alien_img (
+/*alien_rom alien_img (
     .address(alien_pixel), 
     .rgb_data(rgb_data)
-    );
+    );*/
 
 
 

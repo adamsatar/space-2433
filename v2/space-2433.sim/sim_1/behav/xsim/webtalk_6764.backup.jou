@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:39 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Mon Nov 19 11:53:36 2018
+# Process ID: 6764
+# Current directory: /home/adam/repos/space-2433/v2/space-2433.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/adam/repos/space-2433/v2/space-2433.sim/sim_1/behav/xsim/xsim.dir/ship_ram_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/adam/repos/space-2433/v2/space-2433.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/adam/repos/space-2433/v2/space-2433.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/adam/repos/space-2433/v2/space-2433.sim/sim_1/behav/xsim/xsim.dir/ship_ram_tb_behav/webtalk/xsim_webtalk.tcl -notrace
