@@ -6,7 +6,7 @@
 //turned into a space-invaders-like game
 module top_level(
 
-	input clk, reset,/* rota, rotb,*/game_action_button,
+	input sys_clk, reset,/* rota, rotb,*/game_action_button,
 							 /*p1_rota,p1_rotb,shoot_button,*/
     output reg [2:0] r,
     output reg [2:0] g,
@@ -19,6 +19,14 @@ module top_level(
 	 output speaker*/
 
     );
+    
+      clk_wiz_0 clk100MHz
+     (
+      // Clock out ports
+      .clk(clk),     // output clk
+      .pixel_clk(pixel_clk),     // output pixel_clk
+     // Clock in ports
+      .clk_in1(sys_clk));      // input clk_in1
 
 
 wire [9:0] x;

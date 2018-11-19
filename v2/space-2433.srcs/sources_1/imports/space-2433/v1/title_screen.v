@@ -15,7 +15,9 @@ module title_screen(
 	 localparam av_x = 640;
 	 localparam av_y = 480;
 	 //image file dimensions
-
+	 
+	 localparam title_x_pixels = 512;
+     localparam title_y_pixels = 128;
 	 localparam title_pixels = title_x_pixels * title_y_pixels;
 	 
 	 //top left corner of image --> anchor point
@@ -23,8 +25,7 @@ module title_screen(
 	 localparam title_y = 8'd40; //offset title 80 pixels from top (arbitrary)
 	//y_padding == title_y0
 	
-	 localparam title_x_pixels = 512;
-	 localparam title_y_pixels = 128;
+
 assign title_x_range = (x >= title_x) && (x < title_x + title_x_pixels);
 assign title_y_range = (y >= title_y) && (y < title_y + title_y_pixels);	 
 wire [7:0] rgb_data;

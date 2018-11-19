@@ -106,11 +106,7 @@ always @(posedge clk or posedge reset) begin
 	begin
 		ship_x <= ship_x0;
 		ship_y <= ship_y0;
-		
 
-		
-	//	ship_line_number <= 1'b0;
-		//ship_pixel_number <= 1'b0;
 	end
 	else if(quadAr[2] ^ quadAr[1] ^ quadBr[2] ^ quadBr[1])
 		begin
@@ -122,74 +118,11 @@ always @(posedge clk or posedge reset) begin
 	end
 	//move left
 	else begin
-	
-	//	if(ship_x > 3)        // make sure the value doesn't underflow
-	//		ship_x <= ship_x - 3'd4;
-	
 		if(ship_x > 0)
 			ship_x <= ship_x + 3'd4;
 	end
 end
 end
 
-
- localparam p1_ship_x_offset = 10'd0;
-	 //active x,y video regions
- localparam   p1_av_x = 10'd640;
- localparam  p1_av_y = 10'd480;
-	
-	 //image file dimensions
-	 localparam p1_ship_x_pixels = 10'd32;
-	 localparam p1_ship_y_pixels = 10'd32;
-	
-	localparam p1_ship_pixels = 16'd1024;
-
-
-
-
-	 localparam p1_ship_y0 = (av_y/2 - p1_ship_y_pixels/2); 
-    localparam p1_ship_x0 = p1_ship_x_offset;
-
-/////SHIP P1
-always @(posedge clk or posedge reset) begin
-	
-	if(reset == 1'b1) 
-	begin
-
-		
-				p1_ship_x <= p1_ship_x0;
-		p1_ship_y <= p1_ship_y0;
-		
-	
-	end
-	else if(p1_quadAr[2] ^ p1_quadAr[1] ^ p1_quadBr[2] ^ p1_quadBr[1])
-		begin
-//move right aka up
-	if(p1_quadAr[2] ^ p1_quadBr[1]) begin
-
-		if(p1_ship_y > arena_y_offset)
-			p1_ship_y <= p1_ship_y - 3'd4;
-		//else p1_ship_y <= p1_ship_y;
-	end
-	//move left //aka down
-	else begin
-
-		if(p1_ship_y < av_y)
-			p1_ship_y <= p1_ship_y + 3'd4;
-			//else 
-			//p1_ship_y <= p1_ship_y;
-	end
-end
-end
-
-
-// ball movement	
-reg [9:0] ballX;
-reg [8:0] ballY;
-reg ballXdir, ballYdir;
-reg bounceX, bounceY, bounce_paddle;
-	
-wire endOfFrame = (x == 0 && y == 480);
-	
 
 endmodule
