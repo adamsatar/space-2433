@@ -1,4 +1,0 @@
-Running: xsim.dir/ship_ram_tb_behav/xsimk -simmode gui -wdb ship_ram_tb_behav.wdb -simrunnum 0 -socket 54923
-Design successfully loaded
-Design Loading Memory Usage: 32680 KB (Peak: 32736 KB)
-Design Loading CPU Usage: 0 ms
