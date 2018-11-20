@@ -6,7 +6,7 @@
 //turned into a space-invaders-like game
 module top_level(
 
-	input sys_clk, reset,/* rota, rotb,*/game_action_button,
+	input sys_clk, reset,/* rota, rotb,*/game_action_button,shoot_button,
 							 /*p1_rota,p1_rotb,shoot_button,*/
     output reg [2:0] r,
     output reg [2:0] g,
@@ -63,6 +63,17 @@ debouncer game_action_debouncer (
     .input_pulse(game_action_button), 
     .debounced_output(game_action_debounced)
     );
+    
+    debouncer shoot_debouncer (
+        .clk(clk), 
+        .reset(reset), 
+        .input_pulse(shoot_button), 
+        .debounced_output(shoot_debounced)
+        );
+    
+    
+    
+    
 
 //current_state_logic
 always @(posedge clk or posedge reset)
@@ -176,6 +187,21 @@ ship_unit ship (
     .ship_color(ship_color)
 
     );
+    
+    
+     laser_unit laser(
+        
+      .clk(clk),  
+      .reset(reset), 
+       .x(x),
+       .y(y),
+       .ship_x(ship_x), 
+       .ship_y(ship_y), 
+       .shoot(shoot_debounced),
+        
+       .laser_color(laser_color)
+    
+        );
 	 
 	 
 alien_unit alien (

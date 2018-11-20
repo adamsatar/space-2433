@@ -15,6 +15,7 @@ module vga_ctrl #(parameter RESOLUTION_BITS = 4'd10, SYS_CLK_MHZ = 7'd100,
 square_wave_gen vga_clk_unit (
     .clk(clk), 
     .reset(reset), 
+    .start(1'b1),
     .square_wave(vga_clk)
     );
 

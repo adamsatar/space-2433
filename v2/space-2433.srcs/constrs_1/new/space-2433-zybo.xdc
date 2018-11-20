@@ -30,3 +30,5 @@ set_property IOSTANDARD LVCMOS33 [get_ports shoot_button]
 set_property IOSTANDARD LVCMOS33 [get_ports speaker]
 set_property IOSTANDARD LVCMOS33 [get_ports v_sync]
 
+
+set_property PACKAGE_PIN P16 [get_ports shoot_button]
