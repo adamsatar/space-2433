@@ -46,7 +46,7 @@ square_wave_gen #(.SYSCLK_MHZ(100000000),.TARGET_CLK_MHZ(100))
     .clk(clk), 
     .reset(reset), 
     .start(1'b1),
-    .square_wave(animate_laser)
+    .square_wave(animate_laser) 
     );
     
 

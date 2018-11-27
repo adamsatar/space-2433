@@ -1,0 +1,2 @@
+vf:2: command not found: (progn (verilog-auto) (verilog-indent-buffer) (delete-trailing-whitespace) \n (save-buffer))
+vf:2: command not found: (progn (verilog-auto) (verilog-indent-buffer) (delete-trailing-whitespace) \n (save-buffer))

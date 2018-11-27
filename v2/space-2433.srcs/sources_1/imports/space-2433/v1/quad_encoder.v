@@ -41,6 +41,10 @@ always @(*)
 						//flag motion left
 					end
 		end
+		else begin
+		  left_state<= 1'b0;
+		  right_state<=1'b0;
+		end
 
 endmodule
 
